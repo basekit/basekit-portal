@@ -3,7 +3,7 @@
     "widgetVersion": 2,
     "thumbnail":"basekit.png",
     "templateType":"standard",
-    "pageTypes": [ "home", "register", "forgotten-password" ],
+    "pageTypes": [ "home", "login", "register", "forgotten-password" ],
     "screenshot":"basekit-screenshot.jpg",
     "colorSwatches":
     {
