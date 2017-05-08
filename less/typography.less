@@ -3,23 +3,8 @@
 // ----------------------------------------
 
 
-
-
 // #Typography License / Font Faces
 // --------------------------------
-
-
-// Legal Disclaimer
-//
-// These Fonts are licensed only for use on these domains and their subdomains:
-// basekit.com
-//
-// It is illegal to download or use them on other websites.
-//
-// While the @font-face statements below may be modified by the client, this
-// disclaimer may not be removed.
-//
-// Lineto.com, 2016
 
 
 // Font Face: Circular
@@ -43,25 +28,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
-.icon {
-    font-family: FontAwesome;
-}
-
-// Clock
-.fa-clock:before {
-    content: "\f017";
-    font-weight: 400;
-    margin-right: 5px;
- }
-
-// User
-.fa-user:before {
-    content: "\f007";
-    font-weight: 400;
-    margin-right: 5px;
-}
-
 
 
 
@@ -234,128 +200,6 @@ p,
 }
 
 
-// Blockquote
-blockquote {
-    .heading--3;
-    font-size: 26px;
-    line-height: 44px;
-    letter-spacing: 0.004em;
-    margin: 0 auto;
-    max-width: 780px;
-    padding: 0 30px 0 50px;
-    position: relative;
-
-    @media @bp-1024 {
-        padding-left: 70px;
-    }
-
-    @media @tablet {
-        max-width: 100%;
-    }
-
-    @media @mobile {
-        font-size: 24px;
-        line-height: 36px;
-        padding-left: 0;
-    }
-
-    &:before {
-        color: #ECECEC;
-        content: open-quote;
-        font-family: "Circular-Bold";
-        font-size: 200px;
-        line-height: 0.8;
-        position: absolute;
-        left: -100px;
-        top: 0;
-
-        @media @bp-1024 {
-            left: -50px;
-        }
-
-        @media @tablet {
-            font-size: 100px;
-            left: 10px;
-        }
-
-        @media @mobile {
-            top: -30px;
-            left: 0;
-            font-size: 60px;
-        }
-    }
-
-    .quote--person {
-        color: #bdbdbd;
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 2;
-        margin: 0;
-    }
-}
-
-.line-above-title {
-    display: inline-block;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #c2d6ea;
-
-    h5 {
-        font-size: 13px;
-        line-height: 32px;
-        color: @color__blue !important;
-        text-transform: uppercase;
-    }
-}
-
-.heading--intro {
-    color: @color__blue;
-    display: block;
-    font-style: italic;
-    letter-spacing: 1px;
-    padding-bottom: 25px;
-
-    @media @mobile {
-        padding-bottom: 10px;
-    }
-
-    &:after {
-        background-color: @color__blue;
-        content: "";
-        display: inline-block;
-        position: relative;
-        left: 15px;
-        top: -3px;
-        height: 2px;
-        width: 125px;
-
-        @media @mobile {
-            left: 10px;
-            width: 70px;
-        }
-    }
-}
-
-.section--careers .heading--intro {
-    color: @color__blue-light;
-
-    &:after {
-        color: @color__blue-light;
-    }
-}
-
-// Home Intro
-
-.section-home--intro {
-    max-width: 860px;
-    margin: 0 auto;
-    text-align: center;
-
-    .paragraph {
-        font-size: 21px;
-    }
-}
-
-
 
 
 // #Colour Variations
@@ -433,58 +277,6 @@ a {
         }
     }
 
-    &--apply {
-        font-size: 16px;
-        padding: 8px 28px;
-    }
-
-    // Circle
-    &--circle {
-        background: white image('/images/arrow-down.svg') no-repeat;
-        background-position: center;
-        background-size: 20px;
-        -webkit-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.1);
-        -moz-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.1);
-        box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.1);
-        .border-radius(50%);
-        height: 58px;
-        width: 58px;
-        position: absolute;
-        bottom: 2%;
-        .transition(box-shadow .3s ease);
-
-        &:hover,
-        &:focus {
-            background-color: white;
-            -webkit-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.15);
-            -moz-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.15);
-            box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.15);
-        }
-    }
-
-    // White
-    &--white {
-        position: relative;
-        .gradient(#fff, #e5eef7);
-        color: @color__primary;
-        box-shadow: 0px 0px 8px 0px rgba(37, 39, 40, 0.2);
-
-        &:after {
-            position: relative;
-            top: 2px;
-            font-family: FontAwesome;
-            content: "\f178";
-            margin-left: 10px;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-        }
-
-        &:hover {
-            .gradient(#fff, #fff);
-        }
-    }
-
     // Green
     &--green {
         .gradient--green;
@@ -517,37 +309,6 @@ a {
         &:hover {
             .gradient(@color__blue, @color__blue);
             color: white;
-        }
-    }
-
-    // Outline
-    &--outline {
-        .gradient(transparent, transparent);
-        border: 1px solid @color__blue;
-        color: @color__blue;
-        transition: background 0.5s ease, background-color 0.5s ease, color 0.3s ease;
-
-        &:after {
-            position: relative;
-            top: 2px;
-            font-family: FontAwesome;
-            content: "\f178";
-            margin-left: 10px;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-        }
-        &:hover {
-            .gradient(@color__blue, @color__blue);
-            color: white;
-        }
-    }
-
-    // No Arrow
-    &--no-arrow {
-        &:after {
-            content: "";
-            margin-left: 0;
         }
     }
 }

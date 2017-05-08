@@ -1,16 +1,5 @@
 <!doctype html>
-<!--[if lt IE 7]>
-	<html class="no-js ie6 oldie" lang="en">
-<![endif]-->
-<!--[if IE 7]>
-	<html class="no-js ie7 oldie" lang="en">
-<![endif]-->
-<!--[if IE 8]>
-	<html class="no-js ie8 oldie" lang="en">
-<![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js" lang="{{ page.seoLang }}">
-<!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
 	<title>{{ page.title }}</title>
@@ -32,22 +21,10 @@
 
 	<!-- Site Container -->
 	<div class="site-container">
-
 		{% block content %}
 		{% endblock %}
-
 	</div>
 
     {% include basekit.bodyScript %}
-
-	<!-- jQuery -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-	<!-- JS -->
-	<script src="{{ asset('js/main.js')}}"></script>
-
-
-	{% block bodyscripts %}
-	{% endblock %}
 </body>
 </html>
