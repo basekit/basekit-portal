@@ -1,0 +1,46 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<!-- Page Content -->
+<section class="page  page--partners">
+
+    <div class="hero  hero--partners" id="partner-signup">
+
+        <div class="hero-partners-content">
+
+            <div class="hero-partners-header">
+                <a href="/" class="hero-partners-logo">
+                    <img src="{{asset('/images/logo.svg')}}" alt="">
+                </a>
+            </div>
+
+            <!-- Hero Item: Form -->
+            <div class="hero-item--module">
+                
+                <div class="container-form">
+                    <form class="partner-form" id="form1">
+                        <div class="parnter-form-container">
+
+                            <div class="hero-partners-description">
+                                <h3>Login</h3>
+                                <p>Lorem ipsum dolor sit amet</p>
+                            </div>
+
+                            <div class="main-form">
+                                {{widget('userlogin', 'userlogin1', {})|raw}}
+                                <p class="clearfix form-link">Don't have an account? <a href="/sign-up" class="signup-btn"><span>Signup here!</span></a></p>
+                                <p class="form-link"><a href="/forgotten-password">Forgot your password?</a></p>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
+

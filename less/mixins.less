@@ -1,0 +1,471 @@
+// ----------------------------------------
+// BaseKit Portal: LESS > Mixins
+// ----------------------------------------
+
+
+
+
+// ------------------------------
+// #Table of Contents
+// ------------------------------
+
+
+//  #General Mixins
+//  #Flexbox Mixins
+//  #Animations
+
+
+
+
+// ------------------------------
+// #General Mixins
+// ------------------------------
+
+
+
+.animation {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+.delay (@delay) {
+    -webkit-animation-delay: @delay;
+    -moz-animation-delay: @delay;
+    -o-animation-delay: @delay;
+    animation-delay: @delay;
+}
+
+.transition (@transition) {
+    -webkit-transition: @transition;
+    -moz-transition:    @transition;
+    -ms-transition:     @transition;
+    -o-transition:      @transition;
+}
+
+// Transform
+.transform(@transform: scale(1)) {
+    -webkit-transform: @transform;
+    -ms-transform: @transform;
+    transform: @transform;
+}
+
+.border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius:    @radius;
+    border-radius:         @radius;
+}
+
+.box-sizing (@box: border-box) {
+    -moz-box-sizing: @box;
+    -webkit-box-sizing: @box;
+    box-sizing: @box;
+}
+
+// Gradient
+.gradient (@startColor: #eee, @endColor: white) {
+    background-color: @startColor;
+    background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+    background: -webkit-linear-gradient(top, @startColor, @endColor);
+    background: -moz-linear-gradient(top, @startColor, @endColor);
+    background: -ms-linear-gradient(top, @startColor, @endColor);
+    background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+.gradient--blue-light {
+    .gradient(@color__blue-light, @color__blue);
+
+    background-color: @color__blue;
+    background: -webkit-gradient(linear, left top, left bottom, from(@color__blue-light), to(@color__blue));
+    background: -webkit-linear-gradient(top, @color__blue-light, @color__blue);
+    background: -moz-linear-gradient(top, @color__blue-light, @color__blue);
+    background: -ms-linear-gradient(top, @color__blue-light, @color__blue);
+    background: -o-linear-gradient(top, @color__blue-light, @color__blue);
+    color: @color__blue;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gradient--blue {
+    .gradient(#308ff1, @color__primary);
+}
+.gradient--slate {
+    .gradient(#3e4c58, @color__slate);
+}
+.gradient--green {
+    .gradient(#71c371, @color__green);
+}
+
+.center {
+  text-align: center;
+}
+
+
+
+
+// ------------------------------
+// #Flexbox Mixins
+// ------------------------------
+
+
+// The spec: http://www.w3.org/TR/css3-flexbox
+
+// Flexbox display
+.flex-display(@display: flex) {
+    display: ~"-webkit-@{display}";
+    display: ~"-moz-@{display}";
+    display: ~"-ms-@{display}box";
+    display: ~"-ms-@{display}";
+    display: @display;
+}
+
+// The 'flex' shorthand
+.flex(@columns: initial) {
+  -webkit-flex: @columns;
+  -moz-flex: @columns;
+  -ms-flex: @columns;
+  flex: @columns;
+}
+
+// Flex Flow Direction
+.flex-direction(@direction: row) {
+  -webkit-flex-direction: @direction;
+  -moz-flex-direction: @direction;
+  -ms-flex-direction: @direction;
+  flex-direction: @direction;
+}
+
+// Flex Line Wrapping
+.flex-wrap(@wrap: nowrap) {
+  -webkit-flex-wrap: @wrap;
+  -moz-flex-wrap: @wrap;
+  -ms-flex-wrap: @wrap;
+  flex-wrap: @wrap;
+}
+
+// Flex Direction and Wrap
+.flex-flow(@flow) {
+  -webkit-flex-flow: @flow;
+  -moz-flex-flow: @flow;
+  -ms-flex-flow: @flow;
+  flex-flow: @flow;
+}
+
+// Display Order
+.flex-order(@order: 0) {
+  -webkit-order: @order;
+  -moz-order: @order;
+  -ms-order: @order;
+  order: @order;
+}
+
+// Flex grow factor
+.flex-grow(@grow: 0) {
+  -webkit-flex-grow: @grow;
+  -moz-flex-grow: @grow;
+  -ms-flex-grow: @grow;
+  flex-grow: @grow;
+}
+
+// Flex shrink
+.flex-shrink(@shrink: 1) {
+  -webkit-flex-shrink: @shrink;
+  -moz-flex-shrink: @shrink;
+  -ms-flex-shrink: @shrink;
+  flex-shrink: @shrink;
+}
+
+// Flex basis
+.flex-basis(@width: auto) {
+  -webkit-flex-basis: @width;
+  -ms-flex-preferred-size: @width;
+  -moz-flex-basis: @width;
+  -ms-flex-basis: @width;
+  flex-basis: @width;
+  max-width:  @width;
+}
+
+// Axis Alignment
+.justify-content(@justify: flex-start) {
+  -webkit-justify-content: @justify;
+  -moz-justify-content: @justify;
+  -ms-justify-content: @justify;
+  justify-content: @justify;
+}
+
+// Packing Flex Lines
+.align-content(@align: stretch) {
+  -webkit-align-content: @align;
+  -moz-align-content: @align;
+  -ms-align-content: @align;
+  align-content: @align;
+}
+
+// Cross-axis Alignment
+.align-items(@align: stretch) {
+  -webkit-align-items: @align;
+  -moz-align-items: @align;
+  -ms-align-items: @align;
+  -ms-flex-align: @align;
+  align-items: @align;
+}
+
+// Cross-axis Alignment
+.align-self(@align: auto) {
+  -webkit-align-self: @align;
+  -moz-align-self: @align;
+  -ms-align-self: @align;
+  align-self: @align;
+}
+
+
+
+
+// ------------------------------
+// #Animations
+// ------------------------------
+
+
+.animated {
+    -webkit-animation-duration: 1.1s;
+    animation-duration: 1.1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+// Delays
+// ----------
+
+
+.delay-200 {
+    .delay(.2s);
+}
+.delay-400 {
+    .delay(.4s);
+}
+.delay-500 {
+    .delay(.5s);
+}
+.delay-600 {
+    .delay(.6s);
+}
+.delay-800 {
+    .delay(.8s);
+}
+.delay-1000 {
+    .delay(1s);
+}
+.delay-1400 {
+    .delay(1.4s);
+}
+.delay-1600 {
+    .delay(1.6s);
+}
+.delay-1800 {
+    .delay(1.8s);
+}
+.delay-2200 {
+    .delay(2.2s);
+}
+
+
+// FadeIn
+// -----------
+
+
+.fadeIn {
+    opacity:0;
+}
+.fadeIn.go {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+
+// Fade In Key Frames
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        display: block;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        display: block;
+    }
+}
+
+
+// FadeIn Left
+// -----------
+
+
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-400px);
+    }
+    50%{
+       opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    50%{
+       opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.fadeInLeft{
+    opacity: 0;
+    -webkit-transform: translateX(-400px);
+    transform: translateX(-400px);
+}
+.fadeInLeft.go {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+
+
+// FadeIn Right
+// ------------
+
+
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(400px);
+    }
+    50%{
+       opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(400px);
+    }
+    50%{
+       opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.fadeInRight{
+    opacity: 0;
+    -webkit-transform: translateX(400px);
+    transform: translateX(400px);
+}
+.fadeInRight.go {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+
+
+
+
+// Menu Animation
+// ------------------------------
+
+
+@-webkit-keyframes menu-animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.04) translateY(300%);
+            transform: scale(0.04) translateY(300%);
+  }
+  40% {
+    -webkit-transform: scale(0.04) translateY(0);
+            transform: scale(0.04) translateY(0);
+    -webkit-transition: ease-out;
+    transition: ease-out;
+  }
+  40% {
+    -webkit-transform: scale(0.04) translateY(0);
+            transform: scale(0.04) translateY(0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(0.02) translateY(0px);
+            transform: scale(0.02) translateY(0px);
+  }
+  61% {
+    -webkit-transform: scale(0.04);
+            transform: scale(0.04);
+  }
+  99.9% {
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 100%;
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    height: 100%;
+    padding-bottom: 0;
+    border-radius: 0;
+  }
+}
+
+
+@keyframes menu-animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.04) translateY(300%);
+            transform: scale(0.04) translateY(300%);
+  }
+  40% {
+    -webkit-transform: scale(0.04) translateY(0);
+            transform: scale(0.04) translateY(0);
+    -webkit-transition: ease-out;
+    transition: ease-out;
+  }
+  40% {
+    -webkit-transform: scale(0.04) translateY(0);
+            transform: scale(0.04) translateY(0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(0.02) translateY(0px);
+            transform: scale(0.02) translateY(0px);
+  }
+  61% {
+    -webkit-transform: scale(0.04);
+            transform: scale(0.04);
+  }
+  99.9% {
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 100%;
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    height: 100%;
+    padding-bottom: 0;
+    border-radius: 0;
+  }
+}

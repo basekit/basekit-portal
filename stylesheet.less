@@ -1,0 +1,188 @@
+// -------------------------------------
+// BaseKit.com: Stylesheet
+// -------------------------------------
+
+// ------------------------------
+// #Table of Contents
+// ------------------------------
+
+
+//  #Imports
+//  #Site Styles
+//  #Page Styles
+
+//  #Header
+//  #Footer
+//  #Layout
+//  #Sections
+//  #Global Sections
+
+
+
+
+// -----------------------------
+// #Imports
+// -----------------------------
+
+
+@import "@{templateLocal}/less/reset.less";        // Reset
+@import "@{templateLocal}/less/typography.less";   // Typography
+@import "@{templateLocal}/less/mixins.less";       // Mixins
+@import "@{templateLocal}/less/variables.less";    // Variables
+
+@import "@{templateLocal}/less/hero.less";         // Hero
+
+@import "@{templateLocal}/less/page-styles.less";  // Page Styles
+@import "@{templateLocal}/less/partners-overlay.less";  // Partner Form Overlay
+
+
+
+// ------------------------------
+// Site Styles
+// ------------------------------
+
+
+body {
+    background-color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 28px;
+    color: @color__p--text;
+}
+
+
+
+
+// Containers
+// ------------------
+
+
+// Site Container
+.site-container {
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+// Content Containers
+.container {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: @value__content-container--width;
+    margin: 0 auto;
+
+    @media @tablet {
+        width: 90%;
+    }
+
+	&--large {
+        max-width: @value__content-container--width--large;
+    }
+    &--1200 {
+        max-width: @value__content-container--width--1200;
+    }
+    &--1100 {
+        max-width: @value__content-container--width--1100;
+    }
+    &--medium {
+        max-width: @value__content-container--width--medium;
+    }
+    &--small {
+        max-width: @value__content-container--width--small;
+    }
+    &--xsmall {
+        max-width: @value__content-container--width--xsmall;
+    }
+}
+
+
+
+
+// Main Content
+// ------------------
+
+
+.main-content {
+    position: relative;
+    background-color: #fff;
+}
+
+
+
+
+
+// ------------------------------
+// #Header
+// ------------------------------
+
+
+.template-header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10001;
+    padding: 30px 0;
+
+    @media @mobile {
+        padding: 20px 0;
+    }
+
+    .container {
+        .flex-display;
+        .justify-content(space-between);
+
+        @media @bp-1300 {
+            max-width: 95%;
+            width: 95%;
+        }
+        @media @bp-2014 {
+            max-width: 90%;
+            width: 90%;
+        }
+    }
+}
+
+
+// Hide header when outside of scroll zone or when scrolling down
+.template-header.header--hidden.scrolled {
+    .transition(0s);
+    .transform(translateY(-100%));
+    opacity: 0;
+    visibility: hidden;
+
+    @media @bp-1024 {
+        opacity: 1;
+        visibility: visible;
+        .transform(translateY(0));
+    }
+}
+
+
+// Show header when scrolling up
+.template-header.scrolled {
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 25px rgba(51,51,51,0.075);
+    box-shadow: 0px 0px 25px rgba(51,51,51,0.075);
+    .transition(.35s);
+    .transform(translateY(0));
+    padding: 20px 0 18px;
+    position: fixed;
+    opacity: 1;
+
+    .nav-link {
+        color: @color__p--text;
+    }
+    .nav-link--reseller {
+        color: white;
+    }
+
+    @media @bp-1024 {
+        display: none;
+        .transform(translateY(0));
+        .transition(0s);
+        visibility: hidden;
+    }
+}
+
+
