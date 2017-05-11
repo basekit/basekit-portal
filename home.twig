@@ -2,7 +2,42 @@
 
 {% block content %}
 
-{{zone('main')|raw}}
+<!-- Page Content -->
+<section class="page  page--partners">
+
+    <div class="hero  hero--partners" id="partner-signup">
+        <div class="hero-partners-content">
+
+            <div class="hero-partners-header">
+                <a href="/" class="hero-partners-logo">
+                    <img src="{{asset('/images/logo.svg')}}" alt="">
+                </a>
+            </div>
+
+            <!-- Hero Item: Form -->
+            <div class="hero-item--module">
+                
+                <div class="container-form">
+                    <div class="partner-form">
+                        <div class="parnter-form-container">
+
+                            <div class="hero-partners-description">
+                                <h3>Register</h3>
+                            </div>
+                            <div class="main-form">
+                                 {{zone('main')|raw}}
+                                <p class="clearfix form-link">Already have an account? <a href="/login" class="signup-btn"><span>Login here</span>.</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
 
 {% endblock %}
 
