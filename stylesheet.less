@@ -257,10 +257,9 @@ body {
         visibility: visible;
     }
 
-    input,
+    input:not([type="checkbox"]),
     textarea {
         background-color: #f6f8fa;
-        border: none;
         border: 1px solid #e0e2e4;
         outline: none;
         display: block;
@@ -479,7 +478,8 @@ body {
         display: inline;
         font-size: 15px;
         text-align: center;
-        color: inherit;
+        color: #7b8c9a;
+        margin-top: -5px;
     }
 
     button {
