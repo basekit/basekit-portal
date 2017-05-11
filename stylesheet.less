@@ -8,9 +8,9 @@
 // -----------------------------
 
 
-@import "@{templateLocal}/less/reset.less";        // Reset
-@import "@{templateLocal}/less/typography.less";   // Typography
-@import "@{templateLocal}/less/mixins.less";       // Mixins
+// @import "@{templateLocal}/less/reset.less";        // Reset
+// @import "@{templateLocal}/less/typography.less";   // Typography
+// @import "@{templateLocal}/less/mixins.less";       // Mixins
 @import "@{templateLocal}/less/variables.less";    // Variables
 
 
@@ -25,7 +25,6 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     line-height: 28px;
-    color: @color__p--text;
 }
 
 
@@ -86,7 +85,7 @@ body {
         position: relative;
         .flex-direction(row);
         .justify-content(space-between);
-        max-width: @value__content-container--width--xsmall;
+        max-width: 600px;
     }
     .nav-item:first-child {
         display: block;
